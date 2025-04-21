@@ -85,9 +85,5 @@ Rota	Função
 /mvc20251/public/solicitar_retirada.php	Solicitação de retirada (futuro)
 👥 Autores
 Rayssa Silva — responsável pela estrutura base, doadores e instituições
-
 Mateus — responsável pela parte de doações e retiradas
 
-perl
-Copiar
-Editar
