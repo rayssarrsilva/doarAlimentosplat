@@ -3,6 +3,7 @@ require_once __DIR__ . '/../dao/DoacaoDAO.php';
 
 $dao = new DoacaoDAO();
 $doacoes = $dao->listarTodos();
+
 ?>
 
 <!DOCTYPE html>
