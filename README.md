@@ -75,14 +75,6 @@ Cole e execute o script SQL acima
 
 Acesse http://localhost/mvc20251 no navegador
 
-🔗 Rotas Disponíveis (até agora)
-
-Rota	Função
-/mvc20251/index.php	Página inicial
-/mvc20251/public/form_doador.php	Cadastro de doador
-/mvc20251/public/form_instituicao.php	Cadastro de instituição
-/mvc20251/public/form_doacao.php	Registro de doação (futuro)
-/mvc20251/public/solicitar_retirada.php	Solicitação de retirada (futuro)
 👥 Autores
 Rayssa Silva — responsável pela estrutura base, doadores e instituições
 Mateus — responsável pela parte de doações e retiradas
