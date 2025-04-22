@@ -1,14 +1,24 @@
 <?php
-class Conexao {
-    private static $instancia;
+if (!class_exists('Conexao')) {
+    class Conexao {
+        private static $instancia;
 
-    private function __construct() {}
+        public static function conectar() {
+            if (!isset(self::$instancia)) {
+                try {
+                    self::$instancia = new PDO(
+                        'mysql:host=localhost;dbname=doacoes', // esse é o nome do seu banco
+                        'root',
+                        '',
+                        [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]
+                    );
+                    self::$instancia->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                } catch (PDOException $e) {
+                    die("Erro na conexão: " . $e->getMessage());
+                }
+            }
 
-    public static function getInstancia() {
-        if (!isset(self::$instancia)) {
-            self::$instancia = new PDO('mysql:host=localhost;dbname=doacoes', 'root', '');
-            self::$instancia->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return self::$instancia;
         }
-        return self::$instancia;
     }
 }
